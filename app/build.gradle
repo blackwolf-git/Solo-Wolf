@@ -1,8 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android' version '1.9.23'
 }
-
 android {
     namespace 'com.blackwolf.solowolf'
     compileSdk 34
