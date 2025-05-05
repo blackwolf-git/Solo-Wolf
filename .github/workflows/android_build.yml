@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -34,11 +33,23 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x ./gradlew
 
-    - name: Build with Gradle
-      run: ./gradlew assembleDebug
+    - name: Build with Gradle and capture errors
+      run: |
+        ./gradlew assembleDebug --warning-mode all 2>errors.txt || true
+        if [ -f errors.txt ]; then
+          echo "Errors captured during build:"
+          cat errors.txt
+        fi
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
         name: solo-wolf-apk
         path: app/build/outputs/apk/debug/app-debug.apk
+
+    - name: Upload errors.txt if any errors occur
+      if: success() == false
+      uses: actions/upload-artifact@v4
+      with:
+        name: build-errors
+        path: errors.txt
