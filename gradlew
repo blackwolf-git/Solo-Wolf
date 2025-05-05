@@ -1,2 +1,2 @@
 #!/bin/bash
-echo 'Running Gradle Wrapper'
+./gradle/wrapper/gradle-wrapper.jar
