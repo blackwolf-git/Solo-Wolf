@@ -1,2 +1,2 @@
 @echo off
-echo Running Gradle Wrapper
+java -jar "%~dp0\gradle\wrapper\gradle-wrapper.jar" %*
