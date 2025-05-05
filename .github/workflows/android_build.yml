@@ -21,15 +21,18 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Grant execute permission for gradlew
-      run: chmod +x ./gradlew
+    - name: Install Gradle CLI
+      uses: gradle/gradle-build-action@v2
 
     - name: Generate gradle-wrapper.jar if missing
       run: |
         if [ ! -f "./gradle/wrapper/gradle-wrapper.jar" ]; then
-          echo "gradle-wrapper.jar not found. Generating..."
-          ./gradlew wrapper
+          echo "gradle-wrapper.jar not found. Generating using installed Gradle..."
+          gradle wrapper
         fi
+
+    - name: Grant execute permission for gradlew
+      run: chmod +x ./gradlew
 
     - name: Build with Gradle
       run: ./gradlew assembleDebug
