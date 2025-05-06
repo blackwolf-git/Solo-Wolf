@@ -1,76 +1,119 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0A0A1A">
+    android:background="#0A0A1A"
+    tools:context=".MainActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/transparent">
+        android:orientation="vertical"
+        android:padding="24dp">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <!-- App Title -->
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@android:color/transparent">
+            android:layout_height="wrap_content"
+            android:text="InstaAnalyzer 2050"
+            android:textColor="#00B4FF"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"
+            android:textAllCaps="true"
+            android:shadowColor="#0066FF"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="10"/>
 
-            <LinearLayout
+        <!-- Username Input -->
+        <EditText
+            android:id="@+id/username_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="أدخل اسم مستخدم إنستقرام"
+            android:inputType="text"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#6666FF"
+            android:backgroundTint="#0066FF"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:drawableLeft="@drawable/ic_instagram"
+            android:drawableTint="#00B4FF"/>
+
+        <!-- Analyze Button -->
+        <Button
+            android:id="@+id/analyze_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="تحليل الحساب"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:background="@drawable/neon_button_background"
+            android:layout_marginBottom="24dp"
+            android:padding="16dp"/>
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="#00B4FF"
+            android:visibility="gone"
+            android:layout_gravity="center"/>
+
+        <!-- Results Layout -->
+        <LinearLayout
+            android:id="@+id/result_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:padding="16dp"
+            android:background="@drawable/neon_border_background">
+
+            <!-- Analysis Result -->
+            <TextView
+                android:id="@+id/analysis_result"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:textColor="#00FFFF"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"
+                android:lineSpacingMultiplier="1.2"/>
 
-                <TextView
-                    android:id="@+id/userNameTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/blueAccent"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/levelTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/blueAccent"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:id="@+id/auraTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/purpleAccent"
-                    android:textSize="12sp" />
-
-            </LinearLayout>
-
-            <ImageButton
-                android:id="@+id/infoButton"
-                android:layout_width="wrap_content"
+            <!-- Video Suggestion -->
+            <TextView
+                android:id="@+id/video_suggestion"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_info"
-                android:tint="@color/blue"
-                android:layout_gravity="end" />
+                android:textColor="#00FFCC"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"
+                android:lineSpacingMultiplier="1.2"/>
 
-        </androidx.appcompat.widget.Toolbar>
+            <!-- Best Time to Post -->
+            <TextView
+                android:id="@+id/best_time_to_post"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#0099FF"
+                android:textSize="16sp"
+                android:lineSpacingMultiplier="1.2"/>
+        </LinearLayout>
 
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <FrameLayout
-        android:id="@+id/contentFrame"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/bottomNavigation"
-        android:layout_below="@id/toolbar" />
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="#1A1A2E"
-        app:itemIconTint="@color/bottom_nav_colors"
-        app:itemTextColor="@color/bottom_nav_colors"
-        app:menu="@menu/bottom_nav_menu" />
-
-</RelativeLayout>
+        <!-- Future Tech Footer -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="تقنية المستقبل - 2050 Edition"
+            android:textColor="#6666FF"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginTop="24dp"/>
+    </LinearLayout>
+</ScrollView>
