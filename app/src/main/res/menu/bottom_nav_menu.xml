@@ -1,0 +1,46 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_daily_quests"
+        android:icon="@drawable/ic_assignment"
+        android:title="المهام اليومية" />
+        
+    <item
+        android:id="@+id/nav_fitness"
+        android:icon="@drawable/ic_sports_mma"
+        android:title="التمارين" />
+        
+    <item
+        android:id="@+id/nav_nutrition"
+        android:icon="@drawable/ic_restaurant"
+        android:title="التغذية" />
+        
+    <item
+        android:id="@+id/nav_confidence"
+        android:icon="@drawable/ic_self_improvement"
+        android:title="الثقة" />
+        
+    <item
+        android:id="@+id/nav_attraction"
+        android:icon="@drawable/ic_favorite"
+        android:title="الجاذبية" />
+        
+    <item
+        android:id="@+id/nav_transformation"
+        android:icon="@drawable/ic_science"
+        android:title="مختبر التحول" />
+        
+    <item
+        android:id="@+id/nav_challenges"
+        android:icon="@drawable/ic_emoji_events"
+        android:title="قاعة التحديات" />
+        
+    <item
+        android:id="@+id/nav_knowledge"
+        android:icon="@drawable/ic_menu_book"
+        android:title="المكتبة" />
+        
+    <item
+        android:id="@+id/nav_meditation"
+        android:icon="@drawable/ic_self_improvement"
+        android:title="التأمل" />
+</menu>
