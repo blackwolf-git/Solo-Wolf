@@ -1,3 +1,5 @@
+package com.blackwolf.solowolf
+
 import android.content.Context
 import com.example.instagramanalyzer.models.AnalysisData
 import com.example.instagramanalyzer.models.AnalysisResult
