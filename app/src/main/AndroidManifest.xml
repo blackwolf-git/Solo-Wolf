@@ -14,6 +14,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LoadingActivity" />
+        <activity android:name=".UserProfileActivity" />
+        <activity android:name=".DailyQuestsActivity" />
+        <activity android:name=".FitnessGuideActivity" />
+        <activity android:name=".NutritionGuideActivity" />
+        <activity android:name=".StyleAdviceActivity" />
+        <activity android:name=".ConfidenceTipsActivity" />
+        <activity android:name=".AttractionSecretsActivity" />
+        <activity android:name=".GirlsSectionActivity" />
+        <activity android:name=".TransformationLabActivity" />
+        <activity android:name=".ChallengesHallActivity" />
+        <activity android:name=".KnowledgeLibraryActivity" />
+        <activity android:name=".MeditationRoomActivity" />
     </application>
 
 </manifest>
