@@ -1,154 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout 
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context=".MainActivity">
-
-    <com.example.instagramanalyzer.views.NeonEditText
-        android:id="@+id/usernameInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/enter_instagram_username"
-        android:imeOptions="actionGo"
-        android:inputType="text"
-        android:textColor="@color/neon_blue"
-        android:textColorHint="@color/neon_blue_50"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.example.instagramanalyzer.views.NeonButton
-        android:id="@+id/analyzeBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/analyze"
-        app:layout_constraintTop_toBottomOf="@id/usernameInput" />
-
-    <androidx.core.widget.ContentLoadingProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:indeterminateTint="@color/neon_blue"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <TextView
-        android:id="@+id/errorText"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:textColor="@color/neon_pink"
-        android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@id/analyzeBtn" />
+        android:text="مهام اليوم"
+        android:textSize="20sp"
+        android:textColor="@android:color/black" />
 
-    <com.example.instagramanalyzer.views.NeonCardView
-        android:id="@+id/resultsContainer"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="24dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/errorText">
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <TextView
-                    android:id="@+id/usernameDisplay"
-                    style="@style/NeonTextHeader"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:orientation="horizontal">
-
-                    <com.example.instagramanalyzer.views.MetricCard
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        app:metricIcon="@drawable/ic_followers"
-                        app:metricTitle="@string/followers"
-                        app:metricValue="@{viewModel.followersCount}" />
-
-                    <com.example.instagramanalyzer.views.MetricCard
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_weight="1"
-                        app:metricIcon="@drawable/ic_engagement"
-                        app:metricTitle="@string/engagement_rate"
-                        app:metricValue="@{viewModel.engagementRate}" />
-                </LinearLayout>
-
-                <com.example.instagramanalyzer.views.ExpandableSection
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    app:sectionTitle="@string/detailed_analysis">
-
-                    <TextView
-                        android:id="@+id/detailedAnalysis"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        style="@style/NeonTextBody" />
-                </com.example.instagramanalyzer.views.ExpandableSection>
-
-                <com.example.instagramanalyzer.views.ExpandableSection
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    app:sectionTitle="@string/content_suggestions">
-
-                    <TextView
-                        android:id="@+id/contentSuggestions"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        style="@style/NeonTextBody" />
-                </com.example.instagramanalyzer.views.ExpandableSection>
-
-                <com.example.instagramanalyzer.views.ExpandableSection
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    app:sectionTitle="@string/optimal_posting_times">
-
-                    <TextView
-                        android:id="@+id/bestPostingTimes"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        style="@style/NeonTextBody" />
-                </com.example.instagramanalyzer.views.ExpandableSection>
-
-                <com.example.instagramanalyzer.views.ExpandableSection
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    app:sectionTitle="@string/recommendations">
-
-                    <TextView
-                        android:id="@+id/recommendations"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        style="@style/NeonTextBody" />
-                </com.example.instagramanalyzer.views.ExpandableSection>
-            </LinearLayout>
-        </ScrollView>
-    </com.example.instagramanalyzer.views.NeonCardView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
