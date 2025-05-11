@@ -1,17 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#121212"
-    android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- Header with Neon Glow -->
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/app_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to Daily Wolf"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp" />
-</LinearLayout>
+        android:text="Solo Wolf 2050"
+        android:textSize="28sp"
+        android:textColor="#00E5FF"
+        android:fontFamily="sans-serif-condensed"
+        android:shadowColor="#00E5FF"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="10"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
 
+    <!-- User Data Input Section -->
+    <ScrollView
+        android:id="@+id/user_input_section"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/app_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/neon_border"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+Chester: android:orientation="vertical">
+
+            <!-- Personal Data -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="البيانات الشخصية"
+                android:textColor="#00E5FF"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp" />
+
+            <EditText
+                android:id="@+id/name_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="الاسم"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#80FFFFFF"
+                android:backgroundTint="#00E5FF"
+                android:layout_marginBottom="10dp" />
+
+            <EditText
+                android:id="@+id/age_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="العمر"
+                android:inputType="number"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#80FFFFFF"
+                android:backgroundTint="#00E5FF"
+                android:layout_marginBottom="10dp" />
+
+            <EditText
+                android:id="@+id/height_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="الطول (سم)"
+                android:inputType="numberDecimal"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#80FFFFFF"
+                android:backgroundTint="#00E5FF"
+                android:layout_marginBottom="10dp" />
+
+            <EditText
+                android:id="@+id/weight_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="الوزن (كجم)"
+                android:inputType="numberDecimal"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#80FFFFFF"
+                android:backgroundTint="#00E5FF"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Combat Data -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="البيانات القتالية"
+                android:textColor="#00E5FF"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp" />
+
+            <Spinner
+                android:id="@+id/skill_level"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/skill_levels"
+                android:backgroundTint="#00E5FF"
+                android:layout_marginBottom="10dp" />
+
+            <EditText
+                android:id="@+id/preferred_training"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="نوع التدريب المفضل (ملاكمة، كاراتيه، إلخ)"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#80FFFFFF"
+                android:backgroundTint="#00E5FF"
+                android:layout_marginBottom="10dp" />
+
+            <Button
+                android:id="@+id/save_user_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="حفظ البيانات"
+                android:backgroundTint="#00E5FF"
+                android:textColor="#121212"
+                android:layout_marginTop="10dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Sections Grid -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sections_grid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/user_input_section"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
