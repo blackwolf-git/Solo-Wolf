@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Cyberpunk 2050 Theme Colors -->
+    <color name="primary_blue">#FF00F5FF</color>
+    <color name="primary_purple">#FF7B00FF</color>
+    <color name="primary_dark">#FF0A0A1A</color>
+    <color name="secondary_dark">#FF121233</color>
+    <color name="accent_pink">#FFFF00F5</color>
+    
+    <!-- Neon Glow Effects -->
+    <color name="neon_blue_glow">#4D00F5FF</color>
+    <color name="neon_purple_glow">#4D7B00FF</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary">#FFFFFFFF</color>
+    <color name="text_secondary">#FFB3B3B3</color>
+    <color name="text_neon_blue">#FF00F5FF</color>
+</resources>
