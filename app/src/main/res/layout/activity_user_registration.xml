@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_dark"
+    tools:context=".activities.UserRegistrationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/NeonText"
+            android:text="@string/registration_title"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- First Name -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:hintTextColor="@color/text_neon_blue"
+            app:boxStrokeColor="@color/primary_blue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/first_name"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_secondary"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Last Name -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:hintTextColor="@color/text_neon_blue"
+            app:boxStrokeColor="@color/primary_blue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/last_name"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_secondary"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Nickname -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:hintTextColor="@color/text_neon_blue"
+            app:boxStrokeColor="@color/primary_blue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nickname"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_secondary"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Age -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:hintTextColor="@color/text_neon_blue"
+            app:boxStrokeColor="@color/primary_blue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/age"
+                android:inputType="number"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_secondary"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Height -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:hintTextColor="@color/text_neon_blue"
+            app:boxStrokeColor="@color/primary_blue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/height_cm"
+                android:inputType="number"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_secondary"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Weight -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:hintTextColor="@color/text_neon_blue"
+            app:boxStrokeColor="@color/primary_blue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/weight_kg"
+                android:inputType="number"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_secondary"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Personality Type -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/personality_type"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerPersonalityType"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/spinner_neon_border"
+            android:popupBackground="@color/secondary_dark"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Sports Info (Display only) -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sports_info"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Complete Registration Button -->
+        <Button
+            android:id="@+id/btnCompleteRegistration"
+            style="@style/NeonButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/complete_registration"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+</ScrollView>
