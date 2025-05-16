@@ -13,7 +13,7 @@
     <string name="personality_type">Personality Type</string>
     <string name="sports_info">All members train in: Boxing, MMA, Full Contact, Calisthenics</string>
     <string name="complete_registration">Complete Registration</string>
-    
+    <string name="user_avatar">User Avatar</string>
     <!-- Main Activity -->
     <string name="start_workout">Start Workout</string>
     <string name="aura_training">Aura Training</string>
