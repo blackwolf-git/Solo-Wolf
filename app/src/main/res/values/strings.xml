@@ -1,0 +1,67 @@
+<resources>
+    <!-- App Info -->
+    <string name="app_name">Solo Wolf</string>
+    
+    <!-- Registration -->
+    <string name="registration_title">Become The Alpha</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="nickname">Nickname</string>
+    <string name="age">Age</string>
+    <string name="height_cm">Height (cm)</string>
+    <string name="weight_kg">Weight (kg)</string>
+    <string name="personality_type">Personality Type</string>
+    <string name="sports_info">All members train in: Boxing, MMA, Full Contact, Calisthenics</string>
+    <string name="complete_registration">Complete Registration</string>
+    
+    <!-- Main Activity -->
+    <string name="start_workout">Start Workout</string>
+    <string name="aura_training">Aura Training</string>
+    <string name="body_scanner">Body Scanner</string>
+    <string name="relationships">Relationships</string>
+    <string name="default_user_name">John \"Wolf\" Doe</string>
+    <string name="default_level">Level 1</string>
+    <string name="default_xp">0/1000 XP</string>
+    <string name="stats_title">Stats</string>
+    <string name="physical_energy">Physical Energy</string>
+    <string name="mental_energy">Mental Energy</string>
+    <string name="aura_points">Aura Points</string>
+    <string name="daily_tasks">Daily Tasks</string>
+    
+    <!-- Body Scanner -->
+    <string name="body_scanner_title">Body Analysis</string>
+    <string name="scan_body">Scan Your Body</string>
+    <string name="analysis_results">Analysis Results</string>
+    <string name="face_shape_result">Face Shape: %s</string>
+    <string name="hair_type_result">Hair: %s, %s</string>
+    <string name="haircut_recommendations">Recommended Haircuts</string>
+    <string name="workout_recommendations">Workout Recommendations</string>
+    
+    <!-- Aura Training -->
+    <string name="aura_training_title">Aura Development</string>
+    <string name="start_training">Start Training</string>
+    
+    <!-- Relationship Guide -->
+    <string name="relationship_guide_title">Female Archetypes Guide</string>
+    <string name="select_woman_type">Select Woman Type</string>
+    <string name="strengths">Strengths</string>
+    <string name="weaknesses">Weaknesses</string>
+    <string name="approach_strategy">Approach Strategy</string>
+    <string name="building_trust">Building Trust</string>
+    <string name="making_her_fall">Making Her Fall For You</string>
+    <string name="psychological_tips">Psychological Tips</string>
+    
+    <!-- Digital Discipline -->
+    <string name="digital_discipline_title">Digital Discipline</string>
+    <string name="block_porn_sites">Block Porn Sites</string>
+    <string name="social_media_limits">Social Media Limits</string>
+    <string name="view_app_usage">View App Usage</string>
+    <string name="set_daily_limits">Set Daily Limits</string>
+    <string name="digital_discipline_warning">Note: Some features require additional permissions</string>
+    <string name="porn_block_warning">This will attempt to block known adult websites. May not be 100% effective.</string>
+    <string name="social_media_warning">This will help you set limits on social media apps using Android\'s built-in tools.</string>
+    <string name="limits_set_message">Daily limits have been set. You can adjust these in your phone\'s Digital Wellbeing settings.</string>
+    
+    <!-- Warnings -->
+    <string name="ethical_warning">Use this knowledge responsibly. Harmful manipulation is not condoned.</string>
+</resources>
