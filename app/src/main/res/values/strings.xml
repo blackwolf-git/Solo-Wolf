@@ -61,7 +61,13 @@
     <string name="porn_block_warning">This will attempt to block known adult websites. May not be 100% effective.</string>
     <string name="social_media_warning">This will help you set limits on social media apps using Android\'s built-in tools.</string>
     <string name="limits_set_message">Daily limits have been set. You can adjust these in your phone\'s Digital Wellbeing settings.</string>
-    
+
+
+    <string name="home">Home</string>
+    <string name="workouts">Workouts</string>
+    <string name="aura">Aura</string>
+    <string name="relationships">Relationships</string>
+    <string name="settings">Settings</string>    
     <!-- Warnings -->
     <string name="ethical_warning">Use this knowledge responsibly. Harmful manipulation is not condoned.</string>
 </resources>
