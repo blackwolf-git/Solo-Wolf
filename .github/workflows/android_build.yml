@@ -68,6 +68,24 @@ jobs:
         name: build-errors
         path: errors.txt
 
+    - name: Generate file tree with contents
+      run: |
+        echo "Generating file tree with contents..."
+        OUTPUT_FILE="tree.txt"
+        echo "" > $OUTPUT_FILE
+        find . -type f ! -path "./.git/*" ! -path "./tree.txt" | while read file; do
+          echo "FILE: $file" >> $OUTPUT_FILE
+          echo "---------------------" >> $OUTPUT_FILE
+          cat "$file" >> $OUTPUT_FILE
+          echo -e "\n\n" >> $OUTPUT_FILE
+        done
+
+    - name: Upload file tree
+      uses: actions/upload-artifact@v4
+      with:
+        name: source-tree
+        path: tree.txt
+
     - name: Save build errors
       if: failure()
       run: |
