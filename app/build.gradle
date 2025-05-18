@@ -44,7 +44,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion '1.5.9' // تم التحديث من 1.5.8 → 1.5.9 لتتوافق مع Kotlin 1.9.23
+        kotlinCompilerExtensionVersion '1.5.10' // تم التحديث إلى 1.5.10 لتتوافق مع Kotlin 1.9.23
     }
 
     packagingOptions {
