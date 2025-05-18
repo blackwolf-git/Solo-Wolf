@@ -4,7 +4,6 @@ plugins {
     id 'kotlin-kapt'
     id 'com.google.dagger.hilt.android'
 }
-
 android {
     namespace 'com.blackwolf.solowolf'
     compileSdk 34
@@ -44,7 +43,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion '1.5.10' // تم التحديث إلى 1.5.10 لتتوافق مع Kotlin 1.9.23
+        kotlinCompilerExtensionVersion '1.5.15' // تم التحديث إلى 1.5.10 لتتوافق مع Kotlin 1.9.23
     }
 
     packagingOptions {
@@ -63,14 +62,14 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     // Compose
-    def composeBom = platform('androidx.compose:compose-bom:2024.02.00')
+    def composeBom = platform('androidx.compose:compose-bom:2024.05.00')
     implementation composeBom
     implementation 'androidx.compose.material3:material3'
     implementation 'androidx.activity:activity-compose:1.8.2'
     implementation 'androidx.compose.ui:ui-tooling-preview'
     debugImplementation 'androidx.compose.ui:ui-tooling'
     implementation "androidx.navigation:navigation-compose:2.7.7"
-    implementation "androidx.lifecycle:lifecycle-runtime-compose:2.6.2"
+    implementation "androidx.lifecycle:lifecycle-runtime-compose:2.7.0"
 
     // Lifecycle
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.2'
