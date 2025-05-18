@@ -44,7 +44,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion '1.5.8' // محدث ليتوافق مع Kotlin 1.9.23
+        kotlinCompilerExtensionVersion '1.5.9' // تم التحديث من 1.5.8 → 1.5.9 لتتوافق مع Kotlin 1.9.23
     }
 
     packagingOptions {
@@ -63,7 +63,7 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     // Compose
-    def composeBom = platform('androidx.compose:compose-bom:2024.02.00') // محدث
+    def composeBom = platform('androidx.compose:compose-bom:2024.02.00')
     implementation composeBom
     implementation 'androidx.compose.material3:material3'
     implementation 'androidx.activity:activity-compose:1.8.2'
