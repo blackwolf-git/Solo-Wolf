@@ -11,88 +11,107 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:padding="16dp">
 
         <TextView
+            android:id="@+id/titleTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/NeonText"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
             android:text="@string/digital_discipline_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/white"
             android:textSize="24sp"
-            android:textAlignment="center"
-            android:layout_marginBottom="24dp"/>
+            android:textStyle="bold" />
 
         <!-- Porn Blocking -->
         <LinearLayout
+            android:id="@+id/pornBlockingLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginBottom="16dp"
             android:background="@drawable/bg_neon_border"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
             android:padding="16dp">
 
             <TextView
+                android:id="@+id/pornBlockingTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/block_porn_sites"
-                android:textColor="@color/text_primary"/>
+                android:textColor="@color/text_primary"
+                android:textSize="16sp" />
 
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switchBlockPorn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:theme="@style/SwitchNeon"/>
+                android:theme="@style/SwitchNeon" />
         </LinearLayout>
 
         <!-- Social Media Limits -->
         <LinearLayout
+            android:id="@+id/socialMediaLimitsLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginBottom="16dp"
             android:background="@drawable/bg_neon_border"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
             android:padding="16dp">
 
             <TextView
+                android:id="@+id/socialMediaLimitsTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/social_media_limits"
-                android:textColor="@color/text_primary"/>
+                android:textColor="@color/text_primary"
+                android:textSize="16sp" />
 
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switchSocialMediaLimit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:theme="@style/SwitchNeon"/>
+                android:theme="@style/SwitchNeon" />
         </LinearLayout>
 
         <!-- App Usage Stats -->
         <Button
             android:id="@+id/btnAppUsageSettings"
-            style="@style/NeonButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_neon_border"
+            android:padding="12dp"
             android:text="@string/view_app_usage"
-            android:layout_marginBottom="16dp"/>
+            android:textColor="@color/text_primary" />
 
         <!-- Set Daily Limits -->
         <Button
             android:id="@+id/btnSetLimits"
-            style="@style/NeonButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_neon_border"
+            android:padding="12dp"
             android:text="@string/set_daily_limits"
-            android:layout_marginBottom="16dp"/>
+            android:textColor="@color/text_primary" />
 
         <!-- Warning Message -->
         <TextView
+            android:id="@+id/warningTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:padding="8dp"
             android:text="@string/digital_discipline_warning"
             android:textColor="@color/accent_pink"
-            android:textStyle="bold"
-            android:layout_marginTop="16dp"/>
+            android:textSize="14sp"
+            android:textStyle="italic" />
     </LinearLayout>
 </ScrollView>
