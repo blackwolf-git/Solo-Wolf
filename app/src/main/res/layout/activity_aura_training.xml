@@ -10,12 +10,13 @@
     tools:context=".activities.AuraTrainingActivity">
 
     <TextView
+        android:id="@+id/aura_training_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/NeonText"
         android:text="@string/aura_training_title"
         android:textSize="24sp"
-        android:textAlignment="center"
+        android:gravity="center"
         android:layout_marginBottom="16dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -26,6 +27,7 @@
         android:layout_marginBottom="16dp"/>
 
     <LinearLayout
+        android:id="@+id/exercise_details_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -39,41 +41,47 @@
             android:layout_height="wrap_content"
             style="@style/NeonText"
             android:textSize="18sp"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="8dp"
+            android:text=""/>
 
         <TextView
             android:id="@+id/tvExerciseDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/text_secondary"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="8dp"
+            android:text=""/>
 
         <TextView
             android:id="@+id/tvExerciseDifficulty"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/text_secondary"
-            android:layout_marginBottom="4dp"/>
+            android:layout_marginBottom="4dp"
+            android:text=""/>
 
         <TextView
             android:id="@+id/tvExerciseDuration"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/text_secondary"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="8dp"
+            android:text=""/>
 
         <TextView
             android:id="@+id/tvExerciseSteps"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/text_secondary"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="8dp"
+            android:text=""/>
 
         <TextView
             android:id="@+id/tvExerciseBenefits"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/text_secondary"/>
+            android:textColor="@color/text_secondary"
+            android:text=""/>
     </LinearLayout>
 
     <Button
