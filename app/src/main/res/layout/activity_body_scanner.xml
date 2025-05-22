@@ -11,102 +11,109 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:padding="16dp">
 
         <TextView
+            android:id="@+id/titleTextView"
+            style="@style/NeonText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/NeonText"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
             android:text="@string/body_scanner_title"
-            android:textSize="24sp"
-            android:textAlignment="center"
-            android:layout_marginBottom="24dp"/>
+            android:textSize="24sp" />
 
         <Button
             android:id="@+id/btnScan"
             style="@style/NeonButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/scan_body"
-            android:layout_marginBottom="24dp"/>
+            android:layout_marginBottom="24dp"
+            android:text="@string/scan_body" />
 
         <!-- Analysis Results -->
         <LinearLayout
+            android:id="@+id/analysisResultsLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/bg_neon_border"
-            android:layout_marginBottom="16dp">
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <TextView
+                android:id="@+id/analysisResultsTitleTextView"
+                style="@style/NeonText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/NeonText"
+                android:layout_marginBottom="16dp"
                 android:text="@string/analysis_results"
-                android:textSize="18sp"
-                android:layout_marginBottom="16dp"/>
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tvFaceShape"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/text_secondary"
-                android:layout_marginBottom="8dp"/>
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/text_secondary" />
 
             <TextView
                 android:id="@+id/tvHairType"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/text_secondary"
-                android:layout_marginBottom="8dp"/>
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/text_secondary" />
         </LinearLayout>
 
         <!-- Haircut Recommendations -->
         <LinearLayout
+            android:id="@+id/haircutRecommendationsLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/bg_neon_border"
-            android:layout_marginBottom="16dp">
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <TextView
+                android:id="@+id/haircutRecommendationsTitleTextView"
+                style="@style/NeonText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/NeonText"
+                android:layout_marginBottom="16dp"
                 android:text="@string/haircut_recommendations"
-                android:textSize="18sp"
-                android:layout_marginBottom="16dp"/>
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tvHaircutRecommendations"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/text_secondary"/>
+                android:textColor="@color/text_secondary" />
         </LinearLayout>
 
         <!-- Workout Recommendations -->
         <LinearLayout
+            android:id="@+id/workoutRecommendationsLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/bg_neon_border"
             android:orientation="vertical"
-            android:padding="16dp"
-            android:background="@drawable/bg_neon_border">
+            android:padding="16dp">
 
             <TextView
+                android:id="@+id/workoutRecommendationsTitleTextView"
+                style="@style/NeonText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/NeonText"
+                android:layout_marginBottom="16dp"
                 android:text="@string/workout_recommendations"
-                android:textSize="18sp"
-                android:layout_marginBottom="16dp"/>
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tvWorkoutRecommendations"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/text_secondary"/>
+                android:textColor="@color/text_secondary" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
