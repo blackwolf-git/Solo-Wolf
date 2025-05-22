@@ -5,13 +5,14 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="32" tools:ignore="ScopedStorage" />
 
     <application
         android:name=".SoloWolfApplication"
         android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -29,11 +30,24 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activities.UserRegistrationActivity" />
-        <activity android:name=".activities.WorkoutDetailActivity" />
-        <activity android:name=".activities.BodyScannerActivity" />
-        <activity android:name=".activities.AuraTrainingActivity" />
-        <activity android:name=".activities.RelationshipGuideActivity" />
-        <activity android:name=".activities.DigitalDisciplineActivity" />
+        <activity
+            android:name=".activities.UserRegistrationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.WorkoutDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.BodyScannerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.AuraTrainingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.RelationshipGuideActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.DigitalDisciplineActivity"
+            android:exported="false" />
     </application>
+
 </manifest>
