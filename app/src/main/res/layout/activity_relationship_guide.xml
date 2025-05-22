@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,149 +13,158 @@
         android:padding="16dp">
 
         <TextView
+            android:id="@+id/tvTitle"
+            style="@style/NeonText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/NeonText"
+            android:layout_marginBottom="16dp"
             android:text="@string/relationship_guide_title"
-            android:textSize="24sp"
             android:textAlignment="center"
-            android:layout_marginBottom="16dp"/>
+            android:textSize="24sp" />
 
         <TextView
+            android:id="@+id/tvSelectWomanType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:text="@string/select_woman_type"
-            android:textColor="@color/text_secondary"
-            android:layout_marginBottom="8dp"/>
+            android:textColor="@color/text_secondary" />
 
         <Spinner
             android:id="@+id/spinnerWomanType"
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/spinner_neon_border"
-            android:popupBackground="@color/secondary_dark"
-            android:layout_marginBottom="16dp"/>
+            android:popupBackground="@color/secondary_dark" />
 
         <!-- Profile Overview -->
         <LinearLayout
+            android:id="@+id/llProfileOverview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/bg_neon_border"
-            android:layout_marginBottom="16dp">
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <TextView
                 android:id="@+id/tvProfileTitle"
+                style="@style/NeonText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/NeonText"
-                android:textSize="18sp"
-                android:layout_marginBottom="8dp"/>
+                android:layout_marginBottom="8dp"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tvProfileDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/text_secondary"
-                android:layout_marginBottom="16dp"/>
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/text_secondary" />
 
             <TextView
+                android:id="@+id/tvStrengthsLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
                 android:text="@string/strengths"
-                android:textColor="@color/text_neon_blue"
-                android:layout_marginBottom="4dp"/>
+                android:textColor="@color/text_neon_blue" />
 
             <TextView
                 android:id="@+id/tvStrengths"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/text_secondary"
-                android:layout_marginBottom="8dp"/>
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/text_secondary" />
 
             <TextView
+                android:id="@+id/tvWeaknessesLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
                 android:text="@string/weaknesses"
-                android:textColor="@color/text_neon_blue"
-                android:layout_marginBottom="4dp"/>
+                android:textColor="@color/text_neon_blue" />
 
             <TextView
                 android:id="@+id/tvWeaknesses"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/text_secondary"
-                android:layout_marginBottom="16dp"/>
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/text_secondary" />
         </LinearLayout>
 
         <!-- Strategy Sections -->
         <TextView
+            android:id="@+id/tvApproachStrategyLabel"
+            style="@style/NeonText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/NeonText"
+            android:layout_marginBottom="8dp"
             android:text="@string/approach_strategy"
-            android:textSize="18sp"
-            android:layout_marginBottom="8dp"/>
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/tvApproachStrategy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/text_secondary"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/text_secondary" />
 
         <TextView
+            android:id="@+id/tvBuildingTrustLabel"
+            style="@style/NeonText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/NeonText"
+            android:layout_marginBottom="8dp"
             android:text="@string/building_trust"
-            android:textSize="18sp"
-            android:layout_marginBottom="8dp"/>
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/tvBuildingTrust"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/text_secondary"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/text_secondary" />
 
         <TextView
+            android:id="@+id/tvMakingHerFallLabel"
+            style="@style/NeonText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/NeonText"
+            android:layout_marginBottom="8dp"
             android:text="@string/making_her_fall"
-            android:textSize="18sp"
-            android:layout_marginBottom="8dp"/>
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/tvMakingHerFall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/text_secondary"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/text_secondary" />
 
         <TextView
+            android:id="@+id/tvPsychologicalTipsLabel"
+            style="@style/NeonText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/NeonText"
+            android:layout_marginBottom="8dp"
             android:text="@string/psychological_tips"
-            android:textSize="18sp"
-            android:layout_marginBottom="8dp"/>
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/tvPsychologicalTips"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/text_secondary"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/text_secondary" />
 
         <TextView
             android:id="@+id/tvWarning"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:textColor="@color/accent_pink"
-            android:textStyle="bold"
-            android:layout_marginTop="16dp"/>
+            android:textStyle="bold" />
     </LinearLayout>
 </ScrollView>
